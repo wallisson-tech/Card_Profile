@@ -160,6 +160,43 @@
     .action-btn:hover {
       opacity: 0.9;
     }
+
+     /* --- Barra de Rolagem Horizontal (Marquee) no Footer --- */
+    .card-footer-marquee {
+      background: rgba(15, 23, 42, 0.6);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 14s linear infinite;
+    }
+
+    .marquee-content span {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .marquee-content i {
+      color: var(--accent);
+      margin: 0 10px;
+      font-size: 0.7rem;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    
+    }
   </style>
 </head>
 <body>
@@ -200,6 +237,25 @@
 
       <!-- Botão de Ação -->
       <button class="action-btn" onclick="window.open('#', '_blank')">Ver Portfólio</button>
+
+      <!-- Footer com Letreiro / Barra de Rolagem Horizontal -->
+      <div class="card-footer-marquee">
+        <div class="marquee-content">
+          <span>Transformando ideias em código funcional</span>
+          <i class="fas fa-star"></i>
+          <span>Aberto para novas oportunidades e freelas</span>
+          <i class="fas fa-star"></i>
+          <span> >>> Jesus Cristo é o Caminho ✝️</span>
+          <i class="fas fa-star"></i>
+          <!-- Duplicado para manter o efeito contínuo do loop -->
+          <span>Transformando ideias em código funcional</span>
+          <i class="fas fa-star"></i>
+          <span>Aberto para novas oportunidades e freelas</span>
+          <i class="fas fa-star"></i>
+          <span> >>> Jesus Cristo é o Caminho ✝️</span>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
 
     </div>
   </div>
